@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ExploreMundo</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  body {
+    background: #f0f0f0;
+  }
+  header {
+    background: linear-gradient(to right, #2c6fa3, #5aa0d6);
+    color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .logo img {
+    height: 28px;
+  }
+  nav a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  .hero {
+    background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470') center/cover no-repeat;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 80px;
+    color: white;
+  }
+  .hero h1 {
+    font-size: 42px;
+    font-weight: bold;
+  }
+  .hero p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .btn {
+    background: #ff6a00;
+    border: none;
+    padding: 12px 20px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    width: fit-content;
+  }
+  .btn:hover {
+    background: #e55d00;
+  }
+  .section {
+    padding: 50px;
+    text-align: center;
+    background: #efefef;
+  }
+  .section h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  .cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .card {
+    background: white;
+    width: 280px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  }
+  .card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  .card h3 {
+    margin-top: 10px;
+  }
+  .card p {
+    font-size: 13px;
+    padding: 10px;
+    color: #555;
+  }
+  .center-btn {
+    margin-top: 20px;
+  }
+  .sobre {
+    padding: 40px;
+    text-align: center;
+    background: #e6e6e6;
+  }
+  .contato {
+    background: #cfe0ec;
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 320px;
+  }
+  .form input, .form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  .form button {
+    background: #2c6fa3;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .form button:hover {
+    background: #164a82;
+  }
+  .mapa {
+    width: 320px;
+    margin-top: 20px;
+  }
+  .mapa img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  footer {
+    background: #2c6fa3;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+  }
+  @media(max-width: 768px) {
+    .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+    .contato {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .hero {
+      padding: 20px;
+      text-align: center;
+    }
+    .mapa {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="Logo" />
+    <span>ExploreMundo</span>
+  </div>
+  <nav>
+    <a href="#">Início</a>
+    <a href="#">Destinos</a>
+    <a href="#">Sobre</a>
+    <a href="#">Contato</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Descubra Lugares Incríveis!</h1>
+  <p>Explore os melhores destinos ao redor do mundo.</p>
+  <button class="btn" onclick="scrollDestinos()">Saiba Mais</button>
+</section>
+
+<section class="section" id="destinos">
+  <h2>Destinos Populares</h2>
+
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="Paris" />
+      <h3>Paris</h3>
+      <p>Torre Eiffel icônica</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd" alt="Maldivas" />
+      <h3>Maldivas</h3>
+      <p>Bangôs sobre águas cristalinas</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1538970272646-f61fabb3a8a2" alt="Nova York" />
+      <h3>Nova York</h3>
+      <p>Times Square iluminada</p>
+    </div>
+  </div>
+
+  <div class="center-btn">
+    <a href="destinos.html"><button class="btn">Ver Mais Destinos</button></a>
+  </div>
+</section>
+
+<section class="sobre">
+  <h2>Sobre Nós</h2>
+  <p>Somos apaixonados por viagens e queremos ajudar você a explorar o mundo!</p>
+  <br />
+  <button class="btn" onclick="alert('Mais informações em breve!')">Leia Mais</button>
+</section>
+
+<section class="contato">
+  <div class="form">
+    <h3>Fale Conosco</h3>
+    <input type="text" placeholder="Nome" />
+    <input type="email" placeholder="E-mail" />
+    <textarea rows="4" placeholder="Mensagem"></textarea>
+    <button onclick="enviar()">Enviar</button>
+  </div>
+
+<div class="mapa">
+  <h3>Onde Estamos</h3>
+  <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweonEZFMmb6yRqh4tAfyRpqqbjw7e91IxVQ3iIL02DGMu3hx6Zj_B19-GvibWpexCYP1MlW5vE7dY52iNZsxkaUVuHfW0XwDCGEyFAI8M2JK5DG20lWV6PzazmL7g_FNjp4s9Hn31A=s680-w680-h510-rw" 
+       alt="Localização em Brasília" 
+       style="width:100%; border-radius:8px;">
+  <p>📧 contato@exploremundo.com</p>
+  <p>📞 (61) 1234-5678</p>
+</div>
+</section>
+
+<footer>
+  © 2024 ExploreMundo - Todos os direitos reservados
+</footer>
+
+<script>
+  function scrollDestinos() {
+    document.getElementById('destinos').scrollIntoView({ behavior: 'smooth' });
+  }
+  function enviar() {
+    alert('Mensagem enviada com sucesso!');
+  }
+</script>
+
+</body>
+</html>

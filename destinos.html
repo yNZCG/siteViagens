@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mais Destinos</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f0f0f0;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(to right, #2c6fa3, #5aa0d6);
+  color: white;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+/* TITULO */
+.titulo {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* GRID DESTINOS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.card h3 {
+  padding: 10px;
+}
+
+.card p {
+  padding: 0 10px 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* BOTÃO VOLTAR */
+.voltar {
+  display: block;
+  margin: 20px auto;
+  background: #ff6a00;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.voltar:hover {
+  background: #e55d00;
+}
+
+/* FOOTER */
+footer {
+  background: #2c6fa3;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div>🌍 ExploreMundo</div>
+  <a href="index.html">⬅ Voltar</a>
+</header>
+
+<section class="titulo">
+  <h1>Mais Destinos Incríveis</h1>
+  <p>Explore novos lugares pelo mundo</p>
+</section>
+
+<section class="grid">
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34">
+  <h3>Paris</h3>
+  <p>Torre Eiffel</p>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd">
+  <h3>Maldivas</h3>
+  <p>águas cristalinas</p>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1538970272646-f61fabb3a8a2">
+  <h3>Nova York</h3>
+  <p>Times Square
+    
+  </p>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e">
+  <h3>Japão</h3>
+  <p>Monte Fuji</p>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c">
+  <h3>Dubai</h3>
+  <p>Burj Khalifa</p>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5">
+  <h3>Roma</h3>
+  <p>Coliseu</p>
+</div>
+
+</section>
+
+<button class="voltar" onclick="window.location.href='index.html'">Voltar para Início</button>
+
+<footer>
+  © 2024 ExploreMundo
+</footer>
+
+</body>
+</html>
